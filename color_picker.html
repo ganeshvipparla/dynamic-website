@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Color Picker</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+
+    h1 {
+      margin-top: 60px;
+    }
+
+    .color-buttons {
+      margin-top: 30px;
+    }
+
+    .color-button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid black; /* Black border */
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .color-button.gray {
+      background-color: #e0e0e0;
+      color: #000;
+    }
+
+    .color-button.green {
+      background-color: #6fcf97;
+    }
+
+    .color-button.blue {
+      background-color: #56ccf2;
+    }
+
+    .color-button.purple {
+      background-color: #bb6bd9;
+    }
+
+    .info {
+      margin-top: 40px;
+      font-size: 1.2rem;
+    }
+
+    #colorCode {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Color Picker</h1>
+
+  <div class="color-buttons">
+    <button class="color-button gray" onclick="changeColor('#e0e0e0')">#e0e0e0</button>
+    <button class="color-button green" onclick="changeColor('#6fcf97')">#6fcf97</button>
+    <button class="color-button blue" onclick="changeColor('#56ccf2')">#56ccf2</button>
+    <button class="color-button purple" onclick="changeColor('#bb6bd9')">#bb6bd9</button>
+  </div>
+
+  <div class="info">
+    Background Color: <span id="colorCode">#ffffff</span>
+  </div>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+      document.getElementById("colorCode").innerText = color;
+    }
+  </script>
+
+</body>
+</html>
